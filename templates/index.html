@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rachit Nigam</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/animate.css">
+
+	<link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../static/css/aos.css">
+
+	<link rel="stylesheet" href="../static/css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../static/css/flaticon.css">
+	<link rel="stylesheet" href="../static/css/icomoon.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		/* Chat Container */
+		.chat-container {
+			position: absolute;
+			/* Use absolute instead of fixed */
+			top: 120px;
+			/* Distance from the top */
+			right: 100px;
+			/* Distance from the right */
+			width: 400px;
+			/* Adjust width appropriately */
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			padding: 10px;
+			background-color: white;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Chat Header */
+		.chat-header {
+			background-color: #6200ea;
+			color: white;
+			padding: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		/* Chat Header */
+		.chat-header h2 {
+			font-size: 18px;
+			/* Adjust the size here */
+			margin: 0;
+			/* Removes any default margin */
+			white-space: nowrap;
+			/* Prevents text from wrapping */
+			overflow: hidden;
+			/* Ensures the text doesn’t overflow the container */
+			text-overflow: ellipsis;
+			/* Adds "..." if the text is too long */
+		}
+
+
+		/* Chat Box */
+		.chat-box {
+			background-color: white;
+			padding: 15px;
+			border-radius: 10px;
+			height: 300px;
+			/* Adjusted height */
+			overflow-y: auto;
+			max-width: 100%;
+		}
+
+		/* Chat Messages */
+		.chat-message {
+			margin-bottom: 10px;
+		}
+
+		/* Bot's messages */
+		.chat-message.assistant p {
+			background-color: #e0bbff;
+			color: black;
+			padding: 10px;
+			border-radius: 10px;
+			display: inline-block;
+			max-width: 80%;
+		}
+
+		/* User's messages */
+		.chat-message.user p {
+			background-color: #2196f3;
+			color: white;
+			padding: 10px;
+			border-radius: 10px;
+			display: inline-block;
+			max-width: 80%;
+			align-self: flex-end;
+		}
+
+		/* Chat Input */
+		.chat-input {
+			display: flex;
+			padding: 10px;
+			border-top: 1px solid #ccc;
+		}
+
+		.chat-input input {
+			flex: 1;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 20px;
+		}
+
+		.chat-input button {
+			background: none;
+			border: none;
+			font-size: 1.5rem;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+
+		/* Button Styling */
+		#sendBtn {
+			background-color: #6200ea;
+			border: none;
+			border-radius: 50%;
+			color: white;
+			font-size: 18px;
+			padding: 10px;
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		#emojiBtn {
+			font-size: 18px;
+		}
+
+		/* Dark Mode */
+		.dark-mode {
+			background-color: #121212;
+			color: white;
+		}
+
+		.dark-mode .chat-header {
+			background-color: #6200ea;
+		}
+
+		.dark-mode .chat-input input {
+			background-color: #333;
+			color: white;
+		}
+
+		.dark-mode .chat-box {
+			background-color: #1c1c1c;
+		}
+
+		.dark-mode .chat-message.assistant p {
+			background-color: #444444;
+			/* Dark gray background for bot messages */
+			color: #ffffff;
+			/* White text */
+			border: 1px solid #888888;/
+		}
+
+		.dark-mode .chat-message.user p {
+			background-color: #0056b3;
+			/* Bright blue for user messages */
+			color: #ffffff;
+			/* White text */
+			border: 1px solid #007bff;
+			/* High contrast border */
+		}
+
+		.header-menu button {
+			background: none;
+			border: none;
+			color: white;
+			font-size: 1.5rem;
+			cursor: pointer;
+			position: relative;
+		}
+
+		/* Dropdown Menu (hidden by default) */
+		.dropdown-content {
+			display: none;
+			/* Hidden initially */
+			position: absolute;
+			background-color: white;
+			right: 0;
+			border: 1px solid #ddd;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			border-radius: 10px;
+			/* Add border radius for a neat look */
+			width: 150px;
+			/* Set width for the dropdown */
+			font-size: 14px;
+			/* Reduce font size */
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 5px;
+			text-decoration: none;
+			display: block;
+			margin: 5px 0;
+			/* Add margin to separate items */
+		}
+
+		.dropdown-content a:hover {
+			background-color: #f1f1f1;
+		}
+
+
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+		id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Rachit Nigam</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button"
+				data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section"
+							class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section"
+							class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section"
+							class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section"
+							class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section"
+							class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Rachit
+										Nigam</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Machine Learning Engineer...  ',
+										'Consistent Learner...   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+								<br>
+								<br>
+								<h2>An AI/ML Engineer... </h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://www.linkedin.com/in/rachit2004"
+										class="btn btn-primary py-3 px-4">LinkedIn</a>
+									<a href="https://github.com/RachitNigam19"
+										class="btn btn-white btn-outline-white py-3 px-4">Git
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</section>
+	<div class="chat-container">
+		<div class="chat-header">
+			<h2>Rachit's Assistant 🤖</h2>
+			<div class="header-menu">
+				<button id="menuBtn">⋮</button>
+				<div id="menuOptions" class="dropdown-content">
+					<a href="#" id="darkModeOption">Toggle Dark Mode</a>
+					<a href="#" id="infoOption">Info</a>
+				</div>
+			</div>
+		</div>
+		<div class="chat-box" id="chatBox">
+			<!-- Bot's initial message -->
+			<div class="chat-message assistant"></div>
+		</div>
+		<div class="chat-input">
+			<input type="text" id="messageInput" placeholder="Type a message..." />
+			<button id="emojiBtn">😊</button>
+			<!-- Emoji button -->
+			<button id="sendBtn">Send</button>
+			<!-- Send button -->
+		</div>
+	</div>
+
+	<!-- The Modal for Popup -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p id="modalText">This is a modal popup!</p>
+		</div>
+	</div>
+
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div
+										class="col-sm-6 col-md-5">
+										<div
+											class="about-img">
+											<img src="../static/images/Screenshot_20240703_170216_Gallery-fotor-20240801201031.png"
+												class="img-fluid rounded b-shadow-a"
+												alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div
+										class="col-sm-6 col-md-7">
+										<div
+											class="about-info">
+											<p><span class="title-s">Name:
+												</span>
+												<span>Rachit
+													Nigam</span>
+											</p>
+											<p><span class="title-s">Job
+													Role:
+												</span>
+												<span>Student</span>
+											</p>
+											<p><span class="title-s">Experience:
+												</span>
+												<span>Learning</span>
+											</p>
+											<p><span class="title-s">Address:
+												</span>
+												<span>Gujrat,
+													India</span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Python</span> <span
+										class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar"
+											role="progressbar"
+											style="width: 75%;"
+											aria-valuenow="95"
+											aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+
+									<span>Numpy & Pandas
+										</span>
+									<span
+										class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar"
+											role="progressbar"
+											style="width: 70%"
+											aria-valuenow="85"
+											aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+
+									<span>Marplotlib & Seaborn
+										</span>
+									<span
+										class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar"
+											role="progressbar"
+											style="width: 60%"
+											aria-valuenow="90"
+											aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+									<span>
+										Machine
+										Learning & Deep
+										Learning
+									</span>
+									<span
+										class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar"
+											role="progressbar"
+											style="width: 80%"
+											aria-valuenow="85"
+											aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+
+									<span>SQl, Version Control,
+										NLP 
+										
+										etc...</span>
+									<span
+										class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar"
+											role="progressbar"
+											style="width: 65%"
+											aria-valuenow="80"
+											aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div
+								class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Motivated and dedicated 2nd-year BCA
+									student at KJIT College with a
+									strong academic record,
+									consistently scoring over 75%
+									in all
+									semesters. Proficient in AI
+									and ML engineering skills,
+									with a solid foundation in
+									artificial intelligence
+									principles. Eager to apply my
+									knowledge and skills in a
+									dynamic work environment as an
+									AI Engineer Intern to
+									contribute to innovative
+									projects and gain hands-on
+									industry experience.
+								</p>
+								<ul
+									class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex">
+										<span>Profile:</span>
+										<span>AI/ML
+											Engineer</span>
+									</li>
+									<li class="d-flex">
+										<span>Domain:</span>
+										<span> Computer
+											Science</span>
+									</li>
+									<li class="d-flex">
+										<span>Education:</span>
+										<span>Bachelor's of
+											Computer
+											Application</span>
+									</li>
+									<li class="d-flex">
+										<span>Language:</span>
+										<span>English,
+											Hindi</span>
+									</li>
+									<li class="d-flex"><span>
+											Skills:</span>
+										<span>Python (Basic
+											&
+											Advanced),
+											Data
+											Structures
+											&
+											Algorithms:,
+											Version
+											Control:Git
+											& GitHub,
+											Data
+											Analysis:
+											NumPy &
+											Pandas,
+											Data
+											Visualization,
+											Machine
+											Learning &
+											Deep
+											Learning:Ongoing
+											Learning,
+											Soft
+											Skills:Team
+											Collaboration
+											&amp;
+											Continuous
+											Learning :
+											Demonstrated
+											commitment
+											to
+											continuous
+											improvement
+											and
+											staying
+											updated
+											with the
+											latest
+											technologies
+											and
+											methodologies
+											in AI and
+											ML
+										</span>
+									</li>
+									<li class="d-flex">
+										<span>Interest:</span>
+										<span>Artificial
+											Intelligence,
+											Traveling,
+											Trading in
+											Stock
+											market</span>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number"
+										data-number="15">0</span>
+									<span>+</span>
+									<span>&nbsp; Projects
+										completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/rachit2004"
+										class="btn btn-primary py-3 px-3">LinkedIn</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="ftco-section ftco-no-pb" id="resume-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+					<div class="col-md-10 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Resume</h1>
+						<h2 class="mb-4">Resume</h2>
+						<p>Demonstrated commitment to continuous improvement and
+							staying
+							updated with the latest
+							technologies and methodologies in AI and ML.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<h1 class="big-4">Experience</h1>
+					<div class="underline"></div>
+				</div>
+				<br>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2024-Present</span>
+							<h2>Artificial Intelligence</h2>
+							<span class="position">Student</span>
+							<p class="mt-4">Eager to apply my
+								knowledge and skills in a dynamic work
+								environment
+								as an AI Engineer Intern to contribute
+								to
+								innovative projects and gain hands-on
+								industry experience..
+							<ul>
+								<li>Academic Projects: Completed
+									multiple
+									coursework projects focusing
+									on
+									artificial intelligence and
+									machine
+									learning, including
+									developing basic predictive
+									models and
+									understanding neural networks.
+								</li>
+								<li>Relevant Coursework: Studied key
+									subjects such
+									as Data Structures,
+									Algorithms,
+									Probability and Statistics,
+									and
+									Artificial
+									Intelligence, providing a
+									strong
+									theoretical foundation for AI
+									engineering.
+
+								</li>
+								<li>Technical Skills: Proficient in
+									programming
+									languages such as Python and
+									Java, with
+									hands-on experience in using
+									libraries
+									like
+									TensorFlow and Scikit-learn
+									for ML.
+
+								</li>
+								<li>
+									Collaborative Work: Worked on
+									group
+									projects, enhancing teamwork
+									and
+									collaboration skills, and
+									gaining
+									experience in project
+									management and effective
+									communication.
+								</li>
+								<li>
+									Continuous Learning: Actively
+									participating in online
+									courses and
+									workshops to stay updated with
+									the
+									latest advancements in AI
+									and ML, demonstrating a
+									commitment to
+									continuous learning and
+									professional
+									growth.
+									management and effective
+									communication.
+								</li>
+							</ul>
+							</p>
+						</div>
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">AI/ML Skills</span>
+							<h2>AI/ML</h2>
+							<span class="position">Skills</span>
+							<p class="mt-4">Demonstrated commitment to
+								continuous
+								improvement and staying updated with the
+								latest
+								technologies and methodologies in AI and
+								ML to
+								become more proficient in AI and ML.
+							<ul>
+								<li>Programming Languages:Python (Basic
+									&
+									Advanced): Strong proficiency
+									in Python,
+									including object-oriented
+									programming,
+									scripting, and automation.
+								</li>
+								<li>Data Structures & Algorithms:Solid
+									understanding of fundamental
+									data
+									structures (arrays, linked
+									lists,
+									stacks, queues, trees,
+									graphs) and algorithms
+									(sorting,
+									searching, dynamic
+									programming).
+
+								</li>
+								<li>Databases:SQL: Proficient in writing
+									SQL
+									queries, database design, and
+									data
+									manipulation.
+								</li>
+								</li>
+								<li>Machine Learning & Deep
+									Learning:Ongoing
+									Learning: Currently learning
+									machine
+									learning algorithms, model
+									training, and
+									evaluation, as well as deep
+									learning
+									concepts and frameworks.
+
+								</li>
+								</li>
+								<li>Soft Skills:Team Collaboration,
+									Effective in
+									team projects and
+									collaboration &
+									Effective Communication Skills
+								</li>
+								</li>
+								<li>Continuous Learning: Demonstrated
+									commitment
+									to continuous improvement and
+									staying
+									updated with the latest
+									technologies and methodologies
+									in AI and
+									ML.
+								</li>
+							</ul>
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<br>
+
+				<div class="row">
+					<h1 class="big-4">Education</h1>
+					<div class="underline"></div>
+				</div>
+				<br>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2022-2025</span>
+							<h2>Bachelor of Computer Application </h2>
+							<span class="position">K.J. Institute of
+								Engineering &
+								Technology</span>
+							<p class="mt-4">Grade: consistently scoring over
+								8 CGPA  in all
+								semesters.</p>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2021-2022</span>
+							<h2>Higher Secondary School</h2>
+							<span class="position">Saint Basil School</span>
+							<p class="mt-4">Grade: 8 CGPA</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center mt-5">
+					<div class="col-md-6 text-center ftco-animate">
+						<p><a href="../static/Rachit's Resume.pdf" download
+								class="btn btn-primary py-4 px-5">Download
+								CV</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="ftco-section" id="project-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Projects</h1>
+						<h2 class="mb-4">Projects</h2>
+						<p>Below are some of the Machine Learning & Deep Learning Models.</p>
+					</div>
+				</div>
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/RachitNigam19/Breast-Cancer-Predictionn-ML-Model"
+								class="block-20 zoom-effect"
+								style="background-image: url('../static/images/breastcancerimg.png');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+
+								<h3 class="heading"><a
+										href="https://github.com/RachitNigam19/Breast-Cancer-Predictionn-ML-Model">Breast Cancer Detection Using Machine Learning</a></h3>
+								<p>The breast cancer detection model leverages machine learning to accurately classify mammogram images as benign or malignant. It uses deep learning algorithms for high precision, enabling early diagnosis and improving treatment outcomes.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/RachitNigam19/Email-Spam-Detection"
+								class="block-20 zoom-effect"
+								style="background-image: url('../static/images/spamclassifier.png');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://github.com/RachitNigam19/Email-Spam-Detection">
+										Email Spam Detector Using Machine Learning</a>
+								</h3>
+								<p>An email spam detection model that uses machine learning to classify emails as spam or not based on patterns in text, sender, and other features. It’s designed to improve email filtering accuracy and reduce unwanted messages in inboxes..</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry">
+							<a href="https://github.com/RachitNigam19/Rule-Based-Chatbot"
+								class="block-20 zoom-effect"
+								style="background-image: url('../static/images/chatbot.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+
+								<h3 class="heading"><a
+										href="https://github.com/RachitNigam19/Rule-Based-Chatbot">
+										Rule Based Chatbot Using Machine Learning</a></h3>
+								<p>A rule-based chatbot that provides conversational responses using predefined rules and patterns, enhancing user interaction with a friendly and customizable interface.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<!-- added justify-content-center to center align the last two projects -->
+			</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+			<div class="container">
+				<div class="row d-md-flex align-items-center">
+					<div
+						class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="text">
+								<strong class="number"
+									data-number="365">0</strong>
+								<span>Achievements</span>
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="text">
+								<strong class="number"
+									data-number="15">0</strong>
+								<span>Projects</span>
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="text">
+								<strong class="number"
+									data-number="5">0</strong>
+
+								<span><a href="../static/certifications.zip/">Certifications
+										in AI/ML</a></span>
+
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="text">
+								<strong class="number"
+									data-number="8"></strong>
+								<span>8 CGPA + In all semesters </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ftco-section ftco-hireme img margin-top"
+				style="background-image: url(../static/images/bg_1.jpg)">
+				<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github </span> </h2>
+						<div class="heading">
+							<h4> I love to solve Coding problems &amp;
+								Creating projects
+							</h4>
+							<br>
+							<p><a href="https://github.com/RachitNigam19"
+									class="btn btn-primary py-3 px-5">GitHub</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+		</section>
+
+
+
+		<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Contact</h1>
+						<h2 class="mb-4">Contact Me</h2>
+						<p>Below are the details to reach out to me!</p>
+					</div>
+				</div>
+
+				<div class="row d-flex contact-info mb-5">
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div
+								class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-map-signs"></span>
+							</div>
+							<h3 class="mb-4">Address</h3>
+							<p>Gujrat, India</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div
+								class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-phone2"></span>
+							</div>
+							<h3 class="mb-4">Contact Number</h3>
+							<p><a href="tel://9586419028">+91 9586419028</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div
+								class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-paper-plane"></span>
+							</div>
+							<h3 class="mb-4">Email Address</h3>
+							<p><a href="rachitn46@gmail.com">rachitn46@gmail.com</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div
+								class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-globe"></span>
+							</div>
+							<h3 class="mb-4">Download Resume</h3>
+							<p><a href="../static/Rachit's Resume.pdf"
+								
+									download="Rachit Nigam(Resume)">Resume</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="container">
+						<br>
+						<br>
+						<div class="row justify-content-center">
+							<div class="col-md-7 ftco-animate text-center">
+								<h2>Have a<span> Question? </span> <a
+										href="https://forms.gle/yL9fkCHCmiavJSza6"
+										class="btn btn-primary py-3 px-5">Click
+										Here</a> </h2>
+							</div>
+						</div>
+						<br>
+						<ul
+							class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+							<li class="ftco-animate normal-txt">Let's get
+								Connected on
+							</li>
+
+							<li class="ftco-animate"><a
+									href="https://www.linkedin.com/in/rachit2004"><span
+										class="icon-linkedin"></span></a>
+							</li>
+
+							<li class="ftco-animate"><a
+									href="https://www.facebook.com/rachit.nigam.940"><span
+										class="icon-facebook"></span></a>
+							</li>
+							<li class="ftco-animate"><a
+									href="https://www.instagram.com/rachit_n19/"><span
+										class="icon-instagram"></span></a>
+							</li>
+						</ul>
+						<br>
+					</div>
+				</div>
+		</section>
+
+
+
+
+		<footer class="ftco-footer ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>
+							All rights reserved | Created with <i
+								class="icon-heart color-danger"
+								aria-hidden="true"></i> by <a
+								href=""
+								target="_blank">Rachit</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+				<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4"
+					stroke="#eeeeee" />
+				<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4"
+					stroke-miterlimit="10" stroke="#F96D00" />
+			</svg></div>
+
+
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="../static/js/popper.min.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/jquery.easing.1.3.js"></script>
+		<script src="../static/js/jquery.waypoints.min.js"></script>
+		<script src="../static/js/jquery.stellar.min.js"></script>
+		<script src="../static/js/owl.carousel.min.js"></script>
+		<script src="../static/js/jquery.magnific-popup.min.js"></script>
+		<script src="../static/js/aos.js"></script>
+		<script src="../static/js/jquery.animateNumber.min.js"></script>
+		<script src="../static/js/scrollax.min.js"></script>
+		<script src="../static/js/main.js"></script>
+</body>
+
+</html>
