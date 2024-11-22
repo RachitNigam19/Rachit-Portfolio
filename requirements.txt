@@ -29,12 +29,13 @@ argon2-cffi==23.1.0
 argon2-cffi-bindings @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/argon2-cffi-bindings_1699549801117/work
 arrow==1.3.0
 asgiref==3.8.1
-astroid==3.2.4
+astroid==3.3.5
 astropy @ file:///C:/b/abs_5egnt0gyqe/croot/astropy_1726174619184/work
 astropy-iers-data @ file:///C:/b/abs_ecdfv0_ea2/croot/astropy-iers-data_1726000550777/work
 asttokens==2.4.1
 astunparse==1.6.3
 async-lru @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/async-lru_1701796859357/work
+asyncssh==2.18.0
 atomicwrites==1.4.0
 attrs==24.2.0
 Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
@@ -55,7 +56,7 @@ Brotli @ file:///C:/b/abs_3d36mno480/croot/brotli-split_1714483178642/work
 cachetools==5.5.0
 catalogue==2.0.10
 certifi==2023.11.17
-cffi==1.17.0
+cffi==1.17.1
 chardet @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/chardet_1699498892802/work
 charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
 click @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/click_1699473800648/work
@@ -91,6 +92,7 @@ datashader @ file:///C:/b/abs_37m05texdf/croot/datashader_1720534925330/work
 debugpy==1.8.5
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
+Deprecated==1.2.14
 diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630511840874/work
 dill @ file:///C:/b/abs_f79eg27d2q/croot/dill_1715094735295/work
 distlib==0.3.8
@@ -104,7 +106,7 @@ et-xmlfile @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/et_xm
 executing==2.0.1
 fastjsonschema==2.20.0
 filelock==3.14.0
-flake8 @ file:///C:/b/abs_caud66drfv/croot/flake8_1708965316778/work
+flake8==7.1.1
 Flask @ file:///C:/b/abs_f9w7doyu0h/croot/flask_1716545924884/work
 flatbuffers==24.3.25
 fonttools @ file:///C:/b/abs_f47gnfqnx0/croot/fonttools_1713551644747/work
@@ -283,7 +285,7 @@ pyasn1==0.6.1
 pyasn1_modules==0.4.1
 PyAudio==0.2.14
 PyAutoGUI==0.9.54
-pycodestyle @ file:///C:/b/abs_e9pt4mahct/croot/pycodestyle_1701910643139/work
+pycodestyle==2.12.1
 pycosat @ file:///C:/b/abs_5csdern___/croot/pycosat_1714513102923/work
 pycparser==2.22
 pyct @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/pyct_1699542988857/work
@@ -296,6 +298,7 @@ pydocstyle @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/pydoc
 pyerfa @ file:///C:/b/abs_477fivsfe8/croot/pyerfa_1717700768172/work
 pyflakes @ file:///C:/b/abs_b6t1aazq2e/croot/pyflakes_1708963020907/work
 PyGetWindow==0.0.9
+PyGithub==2.5.0
 Pygments==2.17.2
 pyjokes==0.7.2
 PyJWT @ file:///C:/b/abs_04qhgo75wz/croot/pyjwt_1715095119685/work
@@ -322,13 +325,14 @@ python-dotenv @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/py
 python-json-logger @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/python-json-logger_1699543626759/work
 python-lsp-black @ file:///C:/b/abs_5dhen_5vga/croot/python-lsp-black_1709232962589/work
 python-lsp-jsonrpc @ file:///croot/python-lsp-jsonrpc_1708962872556/work
-python-lsp-server @ file:///C:/b/abs_2cdyzvcq4z/croot/python-lsp-server_1708971796975/work
+python-lsp-server==1.12.0
 python-slugify @ file:///tmp/build/80754af9/python-slugify_1620405669636/work
 PythonTurtle==0.3.2
 pytoolconfig @ file:///C:/b/abs_f2j_xsvrpn/croot/pytoolconfig_1701728751207/work
 pyttsx3==2.90
 pytweening==1.2.0
 pytz @ file:///C:/b/abs_6ap4tsz1ox/croot/pytz_1713974360290/work
+pyuca==1.2
 pyviz_comms @ file:///C:/b/abs_674gfmqoxa/croot/pyviz_comms_1711136872853/work
 PyWavelets @ file:///C:/b/abs_95ujr8_xu1/croot/pywavelets_1725657962149/work
 pywhatkit==5.4
@@ -340,7 +344,7 @@ pyzmq==26.2.0
 QDarkStyle @ file:///croot/qdarkstyle_1709231003551/work
 qstylizer @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/qstylizer_1699565338341/work/dist/qstylizer-0.2.2-py2.py3-none-any.whl#sha256=be2f7d956d89710f13dee80f2d594e794c2710f12576fe60ecee84dd1ad72180
 QtAwesome @ file:///C:/b/abs_e1w2vmh9q7/croot/qtawesome_1726169367822/work
-qtconsole @ file:///C:/b/abs_03f8rg9vl6/croot/qtconsole_1709231218069/work
+qtconsole==5.6.1
 QtPy @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/qtpy_1701807198514/work
 queuelib @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/queuelib_1699543858829/work
 random2==1.0.2
@@ -370,7 +374,7 @@ selenium==4.24.0
 semver @ file:///C:/b/abs_4bkbn3v6jp/croot/semver_1709243682483/work
 Send2Trash==1.8.3
 service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
-setuptools==75.1.0
+setuptools==75.5.0
 shellingham==1.5.4
 sip @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/sip_1699475590677/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
@@ -393,8 +397,8 @@ sphinxcontrib-htmlhelp @ file:///tmp/build/80754af9/sphinxcontrib-htmlhelp_16239
 sphinxcontrib-jsmath @ file:///home/ktietz/src/ci/sphinxcontrib-jsmath_1611920942228/work
 sphinxcontrib-qthelp @ file:///home/ktietz/src/ci/sphinxcontrib-qthelp_1611921055322/work
 sphinxcontrib-serializinghtml @ file:///C:/b/abs_91266tdnkr/croot/sphinxcontrib-serializinghtml_1718201501959/work
-spyder @ file:///C:/b/abs_2f04kjngiv/croot/spyder_1727197291220/work
-spyder-kernels @ file:///C:/b/abs_e5u6y4ldr2/croot/spyder-kernels_1707937767956/work
+spyder==6.0.2
+spyder-kernels==3.0.1
 SQLAlchemy @ file:///C:/b/abs_7duxw5rxx8/croot/sqlalchemy_1725885067126/work
 sqlparse==0.5.0
 srsly==2.4.8
@@ -402,6 +406,7 @@ srt==3.5.3
 stack-data==0.6.3
 statsmodels @ file:///C:/b/abs_54b33xdukx/croot/statsmodels_1718381209933/work
 streamlit @ file:///C:/b/abs_84p_54gim8/croot/streamlit_1724335176234/work
+superqt==0.6.7
 sympy==1.13.1
 tables @ file:///C:/b/abs_92un5wtnqq/croot/pytables_1725380800658/work
 tabulate @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/tabulate_1701812852133/work
@@ -460,7 +465,7 @@ websocket-client @ file:///C:/b/abs_5dmnxxoci9/croot/websocket-client_1715878351
 websockets==13.0.1
 Werkzeug @ file:///C:/b/abs_8bittcw9jr/croot/werkzeug_1716533366070/work
 whatthepatch @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/whatthepatch_1699497134590/work
-wheel==0.44.0
+wheel==0.45.0
 widgetsnbextension @ file:///C:/b/abs_538o2crz7f/croot/widgetsnbextension_1710960099872/work
 wikipedia==1.4.0
 win-inet-pton @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/win_inet_pton_1699472992992/work
