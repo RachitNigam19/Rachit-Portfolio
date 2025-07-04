@@ -3,7 +3,7 @@ from chatbot_logic import Rulebot # Import your chatbot class
 
 app = Flask(__name__)
 
-# Instantiate your chatbot
+# Instantiate your chatbot (Loaded from the file of app.py)
 chatbot = Rulebot()
 
 # Route for the main page
